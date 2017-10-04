@@ -66,7 +66,7 @@ echo "=> Creating list script"
 rm -f /listbackups.sh
 cat <<EOF >> /listbackups.sh
 #!/bin/bash
-aws s3 ls ${S3PATH} \${REGION_STR}
+aws ${REGION_STR} s3 ls ${S3PATH}
 EOF
 chmod +x /listbackups.sh
 echo "=> List script created"
